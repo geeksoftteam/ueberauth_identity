@@ -6,6 +6,7 @@ defmodule UeberauthIdentity.Mixfile do
 
   def project do
     [app: :ueberauth_identity,
+     organization: "finotech",
      version: @version,
      name: "Ueberauth Identity",
      package: package(),
@@ -26,13 +27,13 @@ defmodule UeberauthIdentity.Mixfile do
   defp deps do
     [
       {:plug, "~> 1.0"},
-      {:ueberauth, "~> 0.2"},
+      {:ueberauth, "~> 0.5", organization: "finotech"},
 
       # dev/test dependencies
-      {:credo, "~> 0.5", only: [:dev, :test]},
+      {:credo, "~> 0.8", only: [:dev, :test]},
       {:dogma, ">= 0.0.0", only: [:dev, :test]},
-      {:earmark, "~> 0.1", only: :dev},
-      {:ex_doc, "~> 0.1", only: :dev},
+      {:earmark, ">= 0.0.0", only: :dev},
+      {:ex_doc, "~> 0.18", only: :dev},
     ]
   end
 
